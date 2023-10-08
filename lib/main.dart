@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_prime_app/screens/main/main_screen.dart';
+import 'package:food_prime_app/screens/onboarding/onboarding_screen.dart';
+import 'package:food_prime_app/screens/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,12 +27,11 @@ class MyApp extends StatelessWidget {
       },
     );
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Food Prime",
-      theme: ThemeData(
-        primarySwatch: primarySwatch,
-      ),
-      home: const MainScreen()
-    );
+        debugShowCheckedModeBanner: false,
+        title: "Food Prime",
+        theme: ThemeData(
+          primarySwatch: primarySwatch,
+        ),
+        home: const SplashScreen(child: OnboardingScreen()));
   }
 }
